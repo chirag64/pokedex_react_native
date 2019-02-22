@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import axios from "axios";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import axios from 'axios';
 
-import PokemonItem from "./PokemonItem";
-import CONSTANTS from "../constants/constants";
+import PokemonItem from './PokemonItem';
+import CONSTANTS from '../constants/constants';
 
 // TODO: Move in common helpers
 String.prototype.toTitleCase = function() {
@@ -22,7 +22,7 @@ export default class componentName extends Component {
 
   componentDidMount() {
     axios({
-      method: "GET",
+      method: 'GET',
       url: `${CONSTANTS.API_URL}/pokemon`
     })
       .then(response => {
@@ -67,19 +67,19 @@ const styles = StyleSheet.create({
   },
   header: {
     height: 60,
-    backgroundColor: "#CCCCCC",
-    justifyContent: "center"
+    backgroundColor: '#CCCCCC',
+    justifyContent: 'center'
   },
   headerText: {
-    textAlign: "center"
+    textAlign: 'center'
   },
   scrollContainer: {},
   grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "flex-start",
-    alignContent: "flex-start",
-    alignItems: "flex-start",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    alignContent: 'flex-start',
+    alignItems: 'flex-start',
     paddingVertical: 20
   }
 });

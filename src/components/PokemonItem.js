@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
-import axios from "axios";
+import React, { Component } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
+import axios from 'axios';
 
 export default class PokemonItem extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ export default class PokemonItem extends Component {
 
   componentDidMount() {
     axios({
-      method: "GET",
+      method: 'GET',
       url: this.props.pokemon.url
     })
       .then(response => {
@@ -49,18 +49,18 @@ export default class PokemonItem extends Component {
 const styles = StyleSheet.create({
   gridItem: {
     padding: 5,
-    width: "33%",
-    height: 120,
+    width: '33%',
+    height: 120
   },
   pokemonItem: {
-    justifyContent: "space-around",
-    alignItems: "center",
-    backgroundColor: "#EEEEEE",
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#EEEEEE',
     padding: 5,
     borderRadius: 15
   },
   name: {
-    textAlign: "center"
+    textAlign: 'center'
   },
   image: {
     width: 75,
